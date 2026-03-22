@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task3</title>
+<style>
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 2px;
+    background-color: #333;
+}
+
+.title::before {
+    left: 0;
+}
+
+.title::after {
+    right: 0;
+}
+</style>
+</head>
+<body>
+    <h1 class="title">TITLE</h1>
+</body>
+</html>
