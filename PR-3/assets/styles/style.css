@@ -119,5 +119,5 @@ footer p:nth-child(2) /*описати даний селектор у проєк
 
 footer p:last-child a /*описати даний селектор у проєкті*/ {
 	color: #fff;
-	text-decoration: underline;
+	text-decoration: none;
 }
