@@ -1,0 +1,354 @@
+
+/* Коло */
+#circle {
+    width: 120px;
+    height: 120px;
+    background: #33e97c;
+    border-radius: 60%;
+}
+
+/* Квадрат */
+#square {
+    width: 120px;
+    height: 120px;
+    background: #e9337c;
+}
+
+/* Прямокутник */
+#rectangle {
+    width: 220px;
+    height: 120px;
+    background: #6627e5;
+}
+
+/* Овал */
+#oval {
+    width: 200px;
+    height: 100px;
+    background: #55a469;
+    border-radius: 100px / 50px;
+}
+
+/* Трикутник вгору */
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid #eb23d4;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+}
+
+/* Трикутник вниз */
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-top: 140px solid #e97333;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+}
+
+/* Трикутник вліво */
+#triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-right: 140px solid #e9e033;
+    border-bottom: 70px solid transparent;
+}
+
+/* Трикутник вправо */
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-left: 140px solid #33e9af;
+    border-bottom: 70px solid transparent;
+}
+
+/* Ромб */
+#romb {
+    width: 120px;
+    height: 120px;
+    background: #4ccb5b;
+    transform: rotate(-45deg);
+}
+
+/* Трапеція */
+#trapezoid {
+    height: 0;
+    width: 120px;
+    border-bottom: 120px solid #33d1e9;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}
+
+/* Паралелограм */
+#parallelogram {
+    width: 160px;
+    height: 100px;
+    background: #695fc3;
+    transform: skew(30deg);
+}
+
+/* Зірка */
+#star {
+    width: 0;
+    height: 0;
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #eefc2e;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+
+#star:before {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -45px;
+    left: -65px;
+    border-bottom: 80px solid #eefc2e;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+#star::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: -105px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #eefc2e;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+}
+
+/*Зірка(6-ти кутна) */
+#star_six_points {
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #de34f7;
+    margin: 10px auto;
+}
+
+#star_six_points:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #de34f7;
+    margin: 30px 0 0 -50px;
+}
+
+/* П'ятикутник */
+#pentagon {
+    width: 54px;
+    position: relative;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: #277bab transparent;
+}
+
+#pentagon:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent #277bab;
+}
+
+/* Шестикутник */
+#hexagon {
+    width: 100px;
+    height: 55px;
+    background: #fc5e5e;
+    position: relative;
+    margin: 10px auto;
+}
+
+#hexagon:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid #fc5e5e;
+}
+
+#hexagon:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #fc5e5e;
+}
+
+/* Восьмикутник*/
+#octagon {
+    width: 100px;
+    height: 100px;
+    background: #ac60ec;
+    position: relative;
+}
+
+#octagon:before {
+    content: "";
+    width: 42px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid #ac60ec;
+    border-left: 29px solid #ffffff;
+    border-right: 29px solid #ffffff;
+}
+
+#octagon:after {
+    content: "";
+    width: 42px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 29px solid #ac60ec;
+    border-left: 29px solid #ffffff;
+    border-right: 29px solid #ffffff;
+}
+
+/* Серце */
+#heart {
+    position: relative;
+}
+
+#heart:before, #heart:after {
+    content: "";
+    width: 70px;
+    height: 115px;
+    position: absolute;
+    background: red;
+    left: 70px;
+    top: 0;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* Знак нескінченності */
+#infinity {
+    width: 220px;
+    height: 100px;
+    position: relative;
+}
+
+#infinity:before, #infinity:after {
+    content: ""; 
+    width: 60px; 
+    height: 60px; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    border: 20px solid #06c999; 
+    border-radius: 50px 50px 0 50px; 
+    transform: rotate(-45deg);
+}
+
+#infinity:after {
+    left: auto; 
+    right: 0; 
+    border-radius: 50px 50px 50px 0; 
+    transform: rotate(45deg);
+}
+
+/* Бабл для коментаря */
+#comment_bubble {
+    width: 140px;
+    height: 100px;
+    background: #088cb7;
+    position: relative;
+    border-radius: 12px;
+}
+
+#comment_bubble:before {
+    content: ""; 
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 38px;
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-right: 26px solid #088cb7;
+    border-bottom: 13px solid transparent;
+}
+
+/* Pacman */
+#pacman {
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-radius: 70px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 50px;
+    margin: 0;
+}
+
+#star_six_points {
+    position: relative !important;
+    display: block !important;
+    margin: 50px 0 !important;
+}
+
+#romb { margin: 0 !important; }
+#star { margin: 50px 0 !important; }
+#hexagon { margin: 30px 0 !important; }
+#heart { margin: 50px 0; display: block; }
+#infinity { margin: 40px 0; }
+#comment_bubble { margin: 40px 0; }
+#pacman { margin: 40px 0; }
+
+div[id] {
+    margin-bottom: 20px;
+}
+
+
+

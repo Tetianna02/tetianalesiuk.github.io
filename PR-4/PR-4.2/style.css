@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 50px;
+
+}
+
+        /* 1. */
+.box-shadow-method {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 0 40px yellow, 
+                0 0 0 80px blue;
+    margin: 80px; 
+}
+
+        /*  2. */
+.gradient-method {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    font-size: 40px;
+    font-weight: bold;
+    background: radial-gradient(circle, #fff 0% 17%, yellow 17% 50%, blue 50% 100%);
+}
+
+        /* 3.*/
+.pseudo-method {
+    width: 240px;
+    height: 240px;
+    background-color: blue;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pseudo-method::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.pseudo-method::after {
+    content: "TL";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
