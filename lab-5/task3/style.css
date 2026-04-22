@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  
+  .cards-wrapper {
+    overflow: hidden;
+    width: 720px;
+  }
+  
+  .card {
+    float: left;
+    width: 230px;
+    margin-right: 15px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid #ccc;
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+  }
+  
+  .card-header {
+    padding: 24px 16px 20px;
+  }
+  
+  .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .plan {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card-tiny {
+    border-color: #1abc9c;
+  }
+  
+  .card-tiny .card-header {
+    background: #1abc9c;
+  }
+  
+  .card-tiny .btn-signup {
+    background: #1abc9c;
+  }
+  
+  .card-small {
+    border-color: #e8a838;
+  }
+  
+  .card-small .card-header {
+    background: #e8a838;
+  }
+  
+  .card-small .btn-signup {
+    background: #e8a838;
+  }
+  
+  .card-medium {
+    border-color: #c0392b;
+  }
+  
+  .card-medium .card-header {
+    background: #c0392b;
+  }
+  
+  .card-medium .btn-signup {
+    background: #c0392b;
+  }
+  
+  .card-features {
+    padding: 20px 16px 10px;
+    border-top: 1px solid #e8e8e8;
+  }
+  
+  .card-features p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .card-features p strong {
+    color: #444;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 2px dashed #ddd;
+    margin: 10px 16px;
+  }
+  
+  .card-footer {
+    padding: 16px;
+  }
+  
+  .btn-signup {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-signup:hover {
+    opacity: 0.85;
+  }
