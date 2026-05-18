@@ -1,0 +1,269 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #383838;
+    background-image: url("bg.png");
+    margin: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #EEEEEE;
+    margin: 40px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  header {
+    height: 430px;
+    background-image: url("bg-01.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .menu {
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .menu a {
+    display: block;
+    height: 50px;
+    color: #E4E4E4;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .menu a:hover {
+    background-color: #B91A34;
+  }
+  
+  .menu a:visited {
+    color: #E4E4E4;
+  }
+  
+  .container h1 {
+    font-family: "Metal Mania", cursive;
+    font-size: 75px;
+    color: white;
+    margin: 90px 0 65px;
+    text-align: center;
+  }
+  
+  .button {
+    display: block;
+    background: linear-gradient(to bottom right, #DD0000, #FE356F);
+    margin: 0 auto;
+    text-align: center;
+    color: #CFCFCF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 290px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 5px;
+  }
+  
+  #tour {
+    overflow: hidden;
+  }
+  
+  .tour-card {
+    float: left;
+    height: 200px;
+    width: 200px;
+    color: #C6C6C6;
+    font-weight: bold;
+    padding-top: 40px;
+    line-height: 25px;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .tour-card h3,
+  .tour-card p {
+    margin-left: 10px;
+  }
+  
+  .tour-town {
+    text-transform: uppercase;
+  }
+  
+  .tour-date {
+    font-style: italic;
+  }
+  
+  .madrid {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("madrid.jpg");
+  }
+  
+  .turin {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("turin.jpg");
+  }
+  
+  .hamburg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hamburg.jpg");
+  }
+  
+  .krakow {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("krakow.jpg");
+  }
+  
+  .tour-card .button {
+    height: 35px;
+    width: 145px;
+    line-height: 35px;
+    margin-top: 20px;
+  }
+  
+  .tour-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .tour-card {
+    width: 200px;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #C6C6C6;
+    font-weight: bold;
+    padding: 30px 10px 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    line-height: 1.2; 
+  }
+  
+  .tour-card h3,
+  .tour-card p {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .tour-town {
+    text-transform: uppercase;
+  }
+  
+  .tour-date {
+    font-style: italic;
+  }
+  
+  .tour-card .button {
+    margin-top: auto;
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 13px;
+    padding: 5px 10px;
+    height: auto;
+    line-height: normal;
+  }
+  
+
+  #gallery {
+    overflow: hidden;
+  }
+  
+  .photo {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .photo img {
+    display: block;
+    height: 270px;
+    width: 270px;
+    object-fit: cover;
+  }
+  
+  .photo:nth-child(2),
+  .photo:nth-child(5) {
+    margin-left: calc(50% - 445px);
+  }
+  
+  #subscribe {
+    height: 290px;
+    background-image: url("bg-02.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #subscribe .container {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .pitch {
+    padding-top: 40px;
+    text-align: center;
+  }
+  
+  .pitch p {
+    margin-top: 45px;
+    color: #EEEEEE;
+  }
+  
+  .subscribe-form {
+    margin: 15px calc(50% - 178px) 0;
+  }
+  
+  .subscribe-form input {
+    height: 30px;
+    width: 210px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .subscribe-form button {
+    height: 35px;
+    width: 125px;
+    background: linear-gradient(to bottom right, #DD0000, #FE356F);
+    color: #EEEEEE;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  footer {
+    height: 80px;
+    line-height: 30px;
+    text-align: center;
+    color: #EEEEEE;
+    margin-top: 25px;
+  }
+  
+  .fa {
+    color: white;
+    letter-spacing: 15px;
+  }
+  
+  
+  
