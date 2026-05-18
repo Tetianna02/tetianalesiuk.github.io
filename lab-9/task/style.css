@@ -1,0 +1,276 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: #222;
+  text-align: center;
+}
+
+.header {
+  background-color: transparent; 
+}
+
+.header-top-wrapper {
+  background-color: #fff;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #6eb7e4;
+  font-weight: 400;
+}
+
+.nav a {
+  margin-left: 25px;
+  color: #b5b5b5;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #6eb7e4;
+}
+
+.hero {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("img/jumbotron.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ff2c96;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #e91e84;
+}
+
+.services {
+  background: #fff;
+  text-align: center;
+}
+
+.service-items {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.service {
+  max-width: 280px;
+}
+
+.service img, 
+.service svg {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.service p {
+  color: #bbb;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.blog {
+  background: #f8f8f8;
+}
+
+.blog-post {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.blog-post img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.blog-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.blog-content span {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.blog-content p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.gallery {
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  background-color: #2e3b4e;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #ff2c96;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    margin-top: 15px;
+  }
+
+  .service-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-post {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-post img {
+    margin: 0 0 15px 0;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
