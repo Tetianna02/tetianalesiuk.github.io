@@ -1,0 +1,347 @@
+
+   * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .header {
+    background: url('img/jumbotron.jpg') no-repeat center center / cover;
+    min-height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-top {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    gap: 10px;
+    padding: 16px 0;
+  }
+  
+  .logo {
+    font-size: 1.4em;
+    color: #5bc0de;
+    font-weight: 700;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover,
+  .nav a:focus {
+    color: #ff2c96;
+  }
+  
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .hero-content h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 25px;
+    background-color: #ff2c96;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: #e91e84;
+  }
+  
+  .services {
+    background: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .service-items {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .service {
+    max-width: 280px;
+    width: 100%;
+  }
+  
+  .service svg {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+  
+  .service p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .blog {
+    background: #f8f8f8;
+    padding: 40px 0;
+  }
+  
+  .blog-post {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .blog-post img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+  
+  .blog-content h3 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  
+  .blog-content span {
+    font-size: 0.8em;
+    color: #888;
+  }
+  
+  .blog-content p {
+    margin-top: 8px;
+    color: #666;
+  }
+  
+  .gallery {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .gallery-container img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-links a:focus {
+    color: #ff2c96;
+  }
+  
+  .footer p {
+    margin-top: 16px;
+    font-size: 0.8em;
+    color: #aaa;
+  }
+  
+  @media screen and (min-width: 48em) {
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  
+    .header-top {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+  
+    .nav {
+      flex-direction: row;
+      width: auto;
+      gap: 0;
+    }
+  
+    .nav a {
+      margin-left: 20px;
+      padding: 0;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.2em;
+    }
+  
+    .service-items {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  
+    .blog-post {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .blog-post img {
+      width: 200px;
+      height: 160px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  
+    .gallery-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .gallery-container img {
+      width: 220px;
+      height: 150px;
+    }
+  
+    .footer-links {
+      flex-direction: row;
+      justify-content: center;
+      gap: 0;
+    }
+  
+    .footer-links a {
+      margin: 0 10px;
+    }
+  }
+  
+  @media screen and (min-width: 75em) {
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  
+    .header {
+      min-height: 400px;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.5em;
+    }
+  
+    .service-items {
+      gap: 80px;
+    }
+  
+    .service p {
+      font-size: 20px;
+    }
+  
+    .blog {
+      padding: 60px 0;
+    }
+  
+    .gallery-container img {
+      width: 250px;
+      height: 170px;
+    }
+  
+    .services,
+    .gallery {
+      padding: 60px 0;
+    }
+  }
