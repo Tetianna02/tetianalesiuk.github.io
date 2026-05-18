@@ -1,0 +1,229 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ===== PAGE ===== */
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  
+  /* ===== ЗАГОЛОВОК ===== */
+  .page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+  }
+  
+  /* ===== ОБГОРТКА ===== */
+  .catalog-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* ===== СТРІЛКИ ===== */
+  .arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #aaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  
+  .arrow:hover {
+    border-color: #888;
+    color: #444;
+  }
+  
+  /* ===== СІТКА ===== */
+  .catalog-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding-top: 44px;
+  }
+  
+  /* ===== КАРТКА ===== */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px 28px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .card:last-child {
+    border-right: none;
+  }
+  
+  /* ===== БЕЙДЖ =====
+     Зсунутий вправо: left замість 50% → 70%
+  */
+  .badge {
+    position: absolute;
+    top: -65px;
+    left: 79%;                      /* <-- зсув вправо */
+    transform: translateX(-50%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 10;
+  }
+  
+  .badge--new { background-color: #5dc13e; }
+  .badge--hit { background-color: #00bcd4; }
+  
+  /* ===== КАТЕГОРІЯ =====
+     Лінія знизу через border-bottom.
+  */
+  .card-category {
+    height: 36px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    justify-content: center;
+  
+    /* лінія під текстом категорії */
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+  }
+  
+  /* ===== ЗОБРАЖЕННЯ ===== */
+  .card-image {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* ===== НАЗВА ===== */
+  .card-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00aacc;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-name:hover {
+    text-decoration: underline;
+    color: #0088aa;
+  }
+  
+  /* ===== ЦІНА ===== */
+  .card-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    min-height: 44px;
+    align-content: center;
+  }
+  
+  .price-old {
+    font-size: 13px;
+    color: #bbb;
+    text-decoration: line-through;
+  }
+  
+  .price-current {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  /* ===== КНОПКИ ===== */
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: auto;
+    line-height: 1.3;
+  }
+  
+  .btn--buy {
+    background-color: #f5d000;
+    color: #222;
+  }
+  
+  .btn--buy:hover {
+    background-color: #debb00;
+  }
+  
+  .btn--soon {
+    background-color: #e91e8c;
+    color: #fff;
+    font-size: 13px;
+    padding: 14px 20px;
+    white-space: nowrap;
+  }
+  
+  .btn--soon:hover {
+    background-color: #c5167a;
+  }
