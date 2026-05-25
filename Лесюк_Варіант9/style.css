@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffc0cb;
+    color: #333;
+    line-height: 1.4;
+}
+
+.header {
+    background-color: #ffc0cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 5%;
+}
+
+.header-icon {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.catalog-btn {
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.catalog-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.main-content {
+    background-color: #ffffff;
+    width: 95%;
+    margin: 0 auto;
+    padding: 40px 15px;
+    border-radius: 4px;
+}
+
+.new-collection {
+    text-align: center;
+}
+
+.section-suptitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 340px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ffc0cb;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 400px;            
+    object-fit: cover;        
+    object-position: center;  
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.add-to-cart {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #444;
+}
+
+.footer {
+    background-color: #d63384;
+    color: #ffffff;
+    padding: 40px 5%;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-col ul {
+    list-style-type: none;
+}
+
+.footer-col ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-col ul li:first-child {
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.student-name {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 5%;
+    }
+
+    .header-icon, .header-actions {
+        flex: 1;
+    }
+
+    .header-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        flex: 2;
+    }
+
+    .main-content {
+        padding: 60px 40px;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+
+    .product-card {
+        flex: 1;
+        max-width: none;
+        border: 1px solid #eee;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        border-color: #ffc0cb;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1050px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .subscribe-col {
+        text-align: right;
+    }
+}
