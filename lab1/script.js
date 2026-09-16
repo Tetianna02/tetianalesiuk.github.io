@@ -1,15 +1,24 @@
-
-const MY_NAME = "Тетяна";        
-const MY_SURNAME = "Лесюк";      
-
-//  1
+const MY_NAME = "Тетяна";
+const MY_SURNAME = "Лесюк";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    document.getElementById('nameDisplay').textContent = MY_NAME;
-    document.getElementById('surnameDisplay').textContent = MY_SURNAME;
+    let userName = prompt('Введіть своє ім’я:', MY_NAME);
+    if (!userName || userName.trim() === '') {
+        userName = MY_NAME;
+    }
+    userName = userName.trim();
 
-    const nameLetters = MY_NAME.split(''); 
+    let userSurname = prompt('Введіть своє прізвище:', MY_SURNAME);
+    if (!userSurname || userSurname.trim() === '') {
+        userSurname = MY_SURNAME;
+    }
+    userSurname = userSurname.trim();
+
+    document.getElementById('nameDisplay').textContent = userName;
+    document.getElementById('surnameDisplay').textContent = userSurname;
+
+    const nameLetters = userName.split('');
     const ul = document.getElementById('nameList');
     
     nameLetters.forEach(letter => {
@@ -20,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         ul.appendChild(li);
     });
-
-    //  2
 
     const startBtn = document.getElementById('startPromptBtn');
     const namesContainer = document.getElementById('namesContainer');
@@ -49,19 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //  3
-
     const toggleBtn = document.getElementById('toggleBlocksBtn');
     const lettersContainer = document.getElementById('letters');
 
     function createLetterBlocks() {
         lettersContainer.innerHTML = '';
-        const surnameLetters = MY_SURNAME.split(''); 
+        const surnameLetters = userSurname.split('');
         surnameLetters.forEach(letter => {
             const div = document.createElement('div');
             div.className = 'letter-block';
             div.textContent = letter;
-        
             div.addEventListener('mouseenter', () => {
                 alert(`Це літера «${letter}»`);
             });
@@ -72,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.addEventListener('click', () => {
         if (lettersContainer.children.length === 0) {
             createLetterBlocks();
-            toggleBtn.textContent = '🗑 Очистити блоки';
+            toggleBtn.textContent = 'Очистити блоки';
             toggleBtn.classList.add('clear-btn');
         } else {
             lettersContainer.innerHTML = '';
-            toggleBtn.textContent = '▶ Показати блоки';
+            toggleBtn.textContent = 'Показати блоки';
             toggleBtn.classList.remove('clear-btn');
         }
     });
