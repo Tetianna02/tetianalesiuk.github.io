@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="myLoc.js" defer></script>
+</head>
+<body>
+
+    <section>
+        <h2>Визначення місцезнаходження</h2>
+        <form>
+            <input type="button" id="watch" value="Watch me" />
+            <input type="button" id="clearWatch" value="Clear watch" />
+        </form>
+        <div id="status">Відстеження вимкнено</div>
+        <div id="location">Ваші координати з'являться тут.</div>
+        <div id="distance">Відстань до Коледжу з'явиться тут.</div>
+    </section>
+
+    <section>
+        <h2>Пункт призначення</h2>
+        <div class="controls">
+            <input type="text" id="destLat" placeholder="Широта, наприклад 50.4476" />
+            <input type="text" id="destLng" placeholder="Довгота, наприклад 30.5325" />
+        </div>
+        <div class="controls">
+            <button type="button" id="setDestBtn">Задати пункт призначення</button>
+            <button type="button" id="goDestBtn">Показати на карті</button>
+        </div>
+        <div id="destInfo" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Карта</h2>
+        <div id="map"></div>
+    </section>
+
+</body>
+</html>
