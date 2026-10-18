@@ -1,0 +1,287 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    line-height: 1.5;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 0 0 4px;
+}
+
+header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 19px;
+    margin: 0 0 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 16px 0 6px;
+}
+
+section > p {
+    margin: 8px 0 12px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 12px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #d1d5db;
+    padding: 6px 10px;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background: #2f5d8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #244a70;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2f5d8a;
+}
+
+.result {
+    margin-top: 12px;
+}
+
+.result p {
+    margin: 6px 0;
+}
+
+.result:empty {
+    display: none;
+}
+
+.message {
+    padding: 10px 14px;
+    background: #f3f4f6;
+    border-left: 3px solid #2f5d8a;
+}
+
+ul {
+    margin: 8px 0 12px;
+    padding-left: 22px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+li button {
+    margin-left: 10px;
+    padding: 3px 12px;
+    font-size: 13px;
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: default;
+}
+
+
+.message.ok {
+    border-left-color: #2e7d32;
+    background: #e8f3e8;
+}
+
+.message.error {
+    border-left-color: #c62828;
+    background: #fbeaea;
+}
+
+.message:empty {
+    display: none;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+}
+
+.field-row label {
+    min-width: 230px;
+}
+
+.task-text {
+    font-size: 18px;
+    margin: 12px 0 6px;
+}
+
+.answer-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.options {
+    margin: 6px 0 10px;
+}
+
+.option {
+    display: block;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.rotator {
+    display: grid;
+    grid-template-columns: 90px 1fr 90px;
+    grid-template-areas:
+        ". counter ."
+        "prev frame next"
+        ". caption .";
+    align-items: center;
+    max-width: 760px;
+    border: 1px solid #e5e7eb;
+}
+
+.rotator-counter {
+    grid-area: counter;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.rotator-frame {
+    grid-area: frame;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.rotator-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rotator-link {
+    color: #2f5d8a;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.rotator-prev {
+    grid-area: prev;
+}
+
+.rotator-next {
+    grid-area: next;
+}
+
+.rotator-caption {
+    grid-area: caption;
+    text-align: center;
+    padding: 8px;
+    min-height: 3.2em;
+    font-size: 14px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.rotator-title {
+    font-weight: 600;
+}
+
+.captcha-display {
+    display: inline-flex;
+    gap: 8px;
+    padding: 6px;
+    border: 2px solid #d1d5db;
+    background: #ffffff;
+}
+
+.captcha-digit {
+    display: grid;
+    grid-template-columns: repeat(3, 8px);
+    grid-auto-rows: 8px;
+}
+
+.pixel {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+}
+
+.pixel.pixel-on {
+    background: #e00000;
+}
+
+.captcha-input {
+    display: block;
+    margin: 8px 0;
+}
+
+.score {
+    font-size: 18px;
+    margin: 10px 0;
+}
