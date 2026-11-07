@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab8</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <section>
+        <h2>ToDo List</h2>
+        <form id="taskForm">
+            <label for="taskInput">Нове завдання</label>
+            <div class="controls">
+                <input type="text" id="taskInput" placeholder="Додайте завдання" maxlength="200" required />
+                <button type="submit">Додати</button>
+            </div>
+        </form>
+        <div class="controls sort-controls">
+            <label for="taskSort">Сортування</label>
+            <select id="taskSort">
+                <option value="created">За часом додавання</option>
+                <option value="active">Спочатку невиконані</option>
+                <option value="completed">Спочатку виконані</option>
+            </select>
+        </div>
+        <p id="taskCount" role="status"></p>
+        <ul id="taskList" aria-label="Список завдань"></ul>
+        <p id="emptyMessage">Список завдань порожній.</p>
+        <p id="storageMessage" class="message error" role="alert" hidden></p>
+    </section>
+
+</body>
+</html>

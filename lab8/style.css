@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    line-height: 1.5;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 19px;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+form {
+    margin: 8px 0 16px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+input[type="text"],
+select {
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: inherit;
+    background: #ffffff;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 180px;
+}
+
+button {
+    background: #2f5d8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #244a70;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+.task-text:focus-visible {
+    outline: 2px solid #2f5d8a;
+    outline-offset: 3px;
+}
+
+.sort-controls {
+    margin-top: 20px;
+}
+
+#taskCount,
+#emptyMessage {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) 36px;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #2f5d8a;
+    cursor: pointer;
+}
+
+.task-content {
+    min-width: 0;
+}
+
+.task-text {
+    display: block;
+    overflow-wrap: anywhere;
+    cursor: text;
+}
+
+.task time {
+    display: block;
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.task.completed .task-text {
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+.task-edit {
+    width: 100%;
+    min-width: 0;
+}
+
+.delete-button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: #fbeaea;
+    color: #c62828;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.delete-button:hover {
+    background: #f5d0d0;
+}
+
+.message {
+    padding: 10px 14px;
+    border-left: 3px solid #c62828;
+    background: #fbeaea;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 16px;
+    }
+
+    .sort-controls select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .task {
+        gap: 8px;
+    }
+}
