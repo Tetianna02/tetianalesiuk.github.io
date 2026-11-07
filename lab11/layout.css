@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Faster One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/FasterOne-Regular.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    padding: 20px 16px 40px;
+}
+
+section {
+    display: flow-root;
+}
+
+section article {
+    padding: 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    padding: 16px;
+    line-height: 1.5;
+}
+
+.status button {
+    margin: 8px 10px 0 0;
+    padding: 9px 16px;
+    color: #ffffff;
+    background: #2f5d8a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    section article {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 24px;
+    }
+
+    h2 {
+        letter-spacing: -2px;
+        font-size: 2rem;
+    }
+}
