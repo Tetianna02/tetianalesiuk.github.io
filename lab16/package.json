@@ -1,0 +1,18 @@
+{
+    "name": "lab16-node-express-api",
+    "version": "1.0.0",
+    "private": true,
+    "description": "ЛР16: HTTP і Express REST API",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "hello": "node hello-server.js"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "dependencies": {
+        "body-parser": "2.4.0",
+        "express": "5.3.0"
+    }
+}
