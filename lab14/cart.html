@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab14 — Кошик</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="local-data.js" defer></script>
+    <script src="shop.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <p id="loadStatus" role="status" hidden></p>
+    <main id="shop" hidden>
+        <header class="site-header">
+            <h1 id="catalogTitle"></h1>
+            <a href="cart.html" id="cartLink" class="cart-link">
+                <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6" /><circle cx="9" cy="20" r="1" /><circle cx="18" cy="20" r="1" /></svg>
+                <span data-i18n="cart">Кошик</span>
+                <span id="cartCount">0</span>
+            </a>
+            <div class="language-controls">
+                <label for="languageSelect">
+                    <span data-i18n="language">Мова</span>
+                    <select id="languageSelect">
+                        <option value="uk" data-i18n="ukLanguage">Українська</option>
+                        <option value="en" data-i18n="enLanguage">Англійська</option>
+                    </select>
+                </label>
+                <a href="native/index.html" class="version-link" data-i18n="nativeVersion">Версія на чистому JavaScript</a>
+            </div>
+        </header>
+        <p id="notice" class="notice" role="status" hidden></p>
+        <section>
+            <h2 data-i18n="selected">Ви обрали:</h2>
+            <p id="emptyCart" data-i18n="emptyCart" hidden>Кошик порожній</p>
+            <div class="table-wrapper">
+                <table id="cartTable" hidden>
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n="number">№</th>
+                            <th scope="col" data-i18n="product">Назва товару</th>
+                            <th scope="col" data-i18n="unitPrice">Ціна за од.</th>
+                            <th scope="col" data-i18n="quantity">Кількість</th>
+                            <th scope="col" data-i18n="subtotal">Сума</th>
+                            <th scope="col" data-i18n="actions">Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartBody"></tbody>
+                </table>
+            </div>
+            <p id="cartSummary" hidden><span data-i18n="total">Разом до оплати:</span> <span id="cartTotal"></span></p>
+            <div class="controls">
+                <a href="#payment" id="payLink" class="button-link" data-i18n="pay" hidden>Оплатити</a>
+                <a href="index.html" class="button-link secondary" data-i18n="continueShopping">Повернутись до покупок</a>
+            </div>
+        </section>
+    </main>
+    <dialog id="shopDialog" aria-labelledby="dialogTitle"></dialog>
+    <dialog id="languageDialog" aria-labelledby="languageTitle">
+        <h2 id="languageTitle" data-i18n="languageTitle">Оберіть мову / Choose a language</h2>
+        <div class="controls">
+            <button type="button" data-language="uk" lang="uk">Українська</button>
+            <button type="button" data-language="en" lang="en">English</button>
+        </div>
+    </dialog>
+
+</body>
+</html>

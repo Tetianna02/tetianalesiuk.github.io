@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab14</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="local-data.js" defer></script>
+    <script src="shop.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <p id="loadStatus" role="status" hidden></p>
+    <main id="shop" hidden>
+        <header class="site-header">
+            <h1 id="catalogTitle"></h1>
+            <a href="cart.html" id="cartLink" class="cart-link">
+                <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6" /><circle cx="9" cy="20" r="1" /><circle cx="18" cy="20" r="1" /></svg>
+                <span data-i18n="cart">Кошик</span>
+                <span id="cartCount">0</span>
+            </a>
+            <div class="language-controls">
+                <label for="languageSelect">
+                    <span data-i18n="language">Мова</span>
+                    <select id="languageSelect">
+                        <option value="uk" data-i18n="ukLanguage">Українська</option>
+                        <option value="en" data-i18n="enLanguage">Англійська</option>
+                    </select>
+                </label>
+                <a href="native/index.html" class="version-link" data-i18n="nativeVersion">Версія на чистому JavaScript</a>
+            </div>
+        </header>
+        <p id="notice" class="notice" role="status" hidden></p>
+        <section aria-labelledby="catalogTitle">
+            <div id="products" class="products">
+
+            </div>
+        </section>
+    </main>
+    <dialog id="shopDialog" aria-labelledby="dialogTitle"></dialog>
+    <dialog id="languageDialog" aria-labelledby="languageTitle">
+        <h2 id="languageTitle" data-i18n="languageTitle">Оберіть мову / Choose a language</h2>
+        <div class="controls">
+            <button type="button" data-language="uk" lang="uk">Українська</button>
+            <button type="button" data-language="en" lang="en">English</button>
+        </div>
+    </dialog>
+
+</body>
+</html>
