@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab15 — Мобільні телефони</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vendor/supabase.min.js" defer></script>
+    <script src="config.js" defer></script>
+    <script src="auth.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Мобільні телефони</h1>
+    </header>
+
+    <section aria-labelledby="authHeading">
+        <h2 id="authHeading">Обліковий запис</h2>
+        <p id="authStatus" class="message" role="status" aria-live="polite">Перевірка сеансу…</p>
+        <div id="authForms" class="auth-grid" hidden>
+            <form id="registerForm">
+                <h3>Реєстрація</h3>
+                <label for="registerEmail">Електронна адреса
+                    <input id="registerEmail" type="email" autocomplete="email" maxlength="254" required disabled />
+                </label>
+                <label for="registerPassword">Пароль, щонайменше 8 символів
+                    <input id="registerPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required disabled />
+                </label>
+                <button type="submit" disabled>Зареєструватися</button>
+            </form>
+            <form id="loginForm">
+                <h3>Вхід</h3>
+                <label for="loginEmail">Електронна адреса
+                    <input id="loginEmail" type="email" autocomplete="username" maxlength="254" required disabled />
+                </label>
+                <label for="loginPassword">Пароль
+                    <input id="loginPassword" type="password" autocomplete="current-password" maxlength="128" required disabled />
+                </label>
+                <button type="submit" disabled>Увійти</button>
+            </form>
+        </div>
+        <div id="userPanel" hidden>
+            <p id="userInfo"></p>
+            <button id="logoutButton" type="button" disabled>Вийти</button>
+        </div>
+    </section>
+
+    <section aria-labelledby="catalogHeading" id="catalogSection" aria-busy="false">
+        <div class="section-heading">
+            <h2 id="catalogHeading">Каталог телефонів</h2>
+            <button type="button" id="refreshButton" disabled>Оновити список</button>
+        </div>
+        <p id="status" class="message" role="status" aria-live="polite">Підключення до бази даних…</p>
+        <div class="filters">
+            <label for="searchInput">
+                Пошук моделі або виробника
+                <input type="search" id="searchInput" placeholder="Назва моделі або виробник" maxlength="150" />
+            </label>
+            <label for="brandFilter">
+                Виробник
+                <select id="brandFilter">
+                    <option value="">Усі виробники</option>
+                </select>
+            </label>
+            <label for="sortSelect">
+                Сортування
+                <select id="sortSelect">
+                    <option value="newest">Спочатку нові</option>
+                    <option value="model">За назвою моделі</option>
+                    <option value="priceAsc">Від дешевих до дорогих</option>
+                    <option value="priceDesc">Від дорогих до дешевих</option>
+                    <option value="memory">За обсягом пам’яті</option>
+                </select>
+            </label>
+        </div>
+        <p id="resultCount" role="status"></p>
+        <p id="emptyMessage" hidden></p>
+        <div class="table-wrapper">
+            <table id="phonesTable" hidden>
+                <thead>
+                    <tr>
+                        <th scope="col">Модель</th>
+                        <th scope="col">Виробник</th>
+                        <th scope="col">Пам’ять</th>
+                        <th scope="col">Ціна</th>
+                        <th scope="col" id="actionsHeading" hidden>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="phoneList"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="adminPanel" aria-labelledby="formHeading" hidden>
+        <h2 id="formHeading">Додати телефон</h2>
+        <form id="phoneForm">
+            <input type="hidden" id="phoneId" />
+            <fieldset id="phoneFields" disabled>
+                <div class="form-grid">
+                    <label for="modelInput">
+                        Модель
+                        <input type="text" id="modelInput" name="model" maxlength="150" required />
+                    </label>
+                    <label for="brandInput">
+                        Виробник
+                        <input type="text" id="brandInput" name="brand" maxlength="80" list="brandsList" required />
+                        <datalist id="brandsList"></datalist>
+                    </label>
+                    <label for="memoryInput">
+                        Пам’ять
+                        <select id="memoryInput" name="memory_gb" required>
+                            <option value="">Оберіть обсяг</option>
+                            <option value="32">32 ГБ</option>
+                            <option value="64">64 ГБ</option>
+                            <option value="128">128 ГБ</option>
+                            <option value="256">256 ГБ</option>
+                            <option value="512">512 ГБ</option>
+                            <option value="1024">1024 ГБ</option>
+                        </select>
+                    </label>
+                    <label for="priceInput">
+                        Ціна, грн
+                        <input type="number" id="priceInput" name="price" min="0.01" max="9999999.99" step="0.01" required />
+                    </label>
+                </div>
+                <div class="controls">
+                    <button type="submit" id="addButton">Додати телефон</button>
+                    <button type="button" id="cancelEditButton" class="secondary" hidden>Скасувати редагування</button>
+                </div>
+            </fieldset>
+            <p id="formStatus" class="message" role="status" aria-live="polite" hidden></p>
+        </form>
+    </section>
+
+</body>
+</html>
